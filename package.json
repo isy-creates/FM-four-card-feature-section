@@ -1,0 +1,31 @@
+{
+  "name": "four-card-feature-section",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "nodemon -e scss -x \"npm run compile:sass\"",
+    "compile:sass": "node-sass sass/main.scss css/style.prefix.css",
+    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" css/style.prefix.css -o css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isy-creates/FM-four-card-feature-section.git"
+  },
+  "author": "Isy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/isy-creates/FM-data-storage-component/issues"
+  },
+  "homepage": "https://github.com/isy-creates/FM-data-storage-component#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.7.5",
+    "node-sass": "^4.13.1",
+    "nodemon": "^2.0.2",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^7.1.0"
+  },
+  "dependencies": {
+    "reset-css": "^5.0.1"
+  }
+}
