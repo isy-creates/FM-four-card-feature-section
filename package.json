@@ -6,8 +6,7 @@
   "scripts": {
     "watch:sass": "nodemon -e scss -x \"npm run compile:sass\"",
     "compile:sass": "node-sass scss/main.scss css/style.comp.css --output-style compressed",
-    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" css/style.comp.css -o css/style.prefix.css",
-    "minify:css": "css-minify -f css/style.prefix.css"
+    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" css/style.comp.css -o css/style.prefix.css"
   },
   "repository": {
     "type": "git",
