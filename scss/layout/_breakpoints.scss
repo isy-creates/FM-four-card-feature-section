@@ -1,0 +1,30 @@
+$media-direction:       min;  // min / max — default is min (mobile first)
+
+
+$breakpoints: (
+  'tablet':                768px,
+  'desktop':               1024px,
+  'fullhd':                1216px,
+);
+
+@mixin breakpoint($breakpoint) {
+
+    // Es wird gecheckt ob der Wert in der Sass Map vorhanden ist
+    @if map-has-key($breakpoints, $breakpoint) {
+  
+      // Ausgabe
+      @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+        @content;
+      }
+    }
+  
+    // Wenn ihr oben einen Wert eingetragen habt wird hier gecheckt ob ihr einen Einheit angehängt habt. Falls nicht wird px genutzt.
+    @else if unitless($breakpoint) {
+      $breakpoint: $breakpoint + 0px;
+  
+      // Ausgabe
+      @media (min-width: $breakpoint) {
+        @content;
+      }
+    }
+  }

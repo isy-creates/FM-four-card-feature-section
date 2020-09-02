@@ -1,7 +1,12 @@
 html {
     font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+    background-color: $very-light-gray;
 }
 
 body{
     font-size: 1.5rem;
+    font-family: 'Poppins';
+    font-weight: 400;
+    color:$grayish-blue;
+    line-height: 1.4;
 }

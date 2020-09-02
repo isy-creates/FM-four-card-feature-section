@@ -1,0 +1,42 @@
+.features {
+    padding: 0 3.2rem;
+    margin: 8.8rem 0;
+
+    @include breakpoint("desktop") {
+        max-width: 121.6rem;
+        margin: 8.8rem auto;
+    }
+
+    &__text {
+        text-align: center;
+        margin-bottom: 7.2rem;
+    }
+
+    &__card {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(38.4rem, 1fr));
+        grid-auto-rows: 21.8rem;
+        gap: 2.4rem;
+
+        @include breakpoint("desktop") {
+            gap: 1.6rem;
+        }
+    }
+}
+
+.card {
+    @include breakpoint("desktop") {
+        &--cyan {
+            grid-row: 1 / span 2;
+            align-self: center;
+        }
+        &--orange {
+            grid-row-start: 2;
+            grid-column-start: 2;
+        }
+        &--blue {
+            grid-row: 1 / span 2;
+            align-self: center;
+        }
+    }
+}

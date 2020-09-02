@@ -1,0 +1,41 @@
+@mixin dropshadow {
+    box-shadow: 0 1rem 2rem rgba($blue, .2),
+                0 2rem 1rem -1rem rgba($blue, .05);
+}
+
+@mixin card-base {
+    border-radius: 1.2rem;
+    @include dropshadow();
+
+    &:after{
+        content:'';
+        height:.4rem;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &--cyan{
+        &:after{
+            background-color:$cyan;
+        }
+    }
+
+    &--red{
+        &:after{
+            background-color:$red;
+        }
+    }
+    &--orange{
+        &:after{
+            background-color:$orange;
+        }
+    }
+
+    &--blue{
+        &:after{
+            background-color:$blue;
+        }
+    }
+}
