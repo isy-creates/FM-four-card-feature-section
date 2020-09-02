@@ -1,0 +1,18 @@
+//Animation-Delay on elements
+@for $i from 1 through 4 {
+    .card:nth-child(#{$i}n) {
+        animation-delay: #{$i * 0.5}s;
+    }
+}
+
+@keyframes from-bottom{
+    0%{
+        opacity: 0;
+        transform: translateY(1.6rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
