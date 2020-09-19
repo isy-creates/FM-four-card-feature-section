@@ -2,7 +2,7 @@
     padding: 0 3.2rem;
     margin: 8.8rem 0;
 
-    @include breakpoint("desktop") {
+    @include breakpoint("fullhd") {
         max-width: 121.6rem;
         margin: 8.8rem auto;
     }
@@ -18,14 +18,14 @@
         grid-auto-rows: 21.8rem;
         gap: 2.4rem;
 
-        @include breakpoint("desktop") {
+        @include breakpoint("fullhd") {
             gap: 1.6rem;
         }
     }
 }
 
 .card {
-    @include breakpoint("desktop") {
+    @include breakpoint("fullhd") {
         &--cyan {
             grid-row: 1 / span 2;
             align-self: center;
